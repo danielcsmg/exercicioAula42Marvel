@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Marvel App</string>
+    <string name="heroi_marvel">Imagem do herói da Marvel</string>
+    <string name="heroi">herói da Marvel Comics</string>
+    <string name="herois_marvel">Alguns heróis da Marvel</string>
+    <string name="texto_cadastro">Cadastre aqui seus heróis da Marvel Comics e deixe Stan Lee Feliz!</string>
+    <string name="nome_heroi">Nome do Herói</string>
+    <string name="cadastrar_heroi">Cadastrar herói</string>
+    <string name="nome_heroi_detalhe">Teste título heroi</string>
+    <string name="imagem_do_heroi">Imagem do heroi</string>
+</resources>
