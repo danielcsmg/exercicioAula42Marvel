@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cadastroheroi.view.CadastroHeroiFragment">
+
+    <EditText
+        android:id="@+id/etImageUri"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:autofillHints="name"
+        android:hint="@string/imagem_uri"
+        android:inputType="textUri"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNomeHeroi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/nome_do_heroi"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/etImageUri"
+        app:layout_constraintStart_toStartOf="@+id/etImageUri"
+        app:layout_constraintTop_toBottomOf="@+id/etImageUri" />
+
+    <EditText
+        android:id="@+id/etDescricaoHeroi"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimen_100"
+        android:hint="@string/descricao_heroi"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/etNomeHeroi"
+        app:layout_constraintStart_toStartOf="@+id/etNomeHeroi"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeHeroi" />
+
+    <Button
+        android:id="@+id/btnCadastro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="@string/botao_cadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etDescricaoHeroi"
+        app:layout_constraintStart_toStartOf="@+id/etDescricaoHeroi"
+        app:layout_constraintTop_toBottomOf="@+id/etDescricaoHeroi"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/btnListaHeroi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:text="@string/botao_ver_lista_herois"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnCadastro"
+        app:layout_constraintStart_toStartOf="@+id/btnCadastro"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadastro"
+        app:layout_constraintVertical_bias="0.1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

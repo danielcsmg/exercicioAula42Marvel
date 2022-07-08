@@ -1,4 +1,4 @@
-package br.com.zup.marvelapp
+package br.com.zup.marvel
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

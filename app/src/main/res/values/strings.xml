@@ -8,4 +8,11 @@
     <string name="cadastrar_heroi">Cadastrar herói</string>
     <string name="nome_heroi_detalhe">Teste título heroi</string>
     <string name="imagem_do_heroi">Imagem do heroi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imagem_uri">Insira a URL da imagem</string>
+    <string name="nome_do_heroi">Insira o nome do herói</string>
+    <string name="descricao_heroi">Insira uma descrição</string>
+    <string name="botao_cadastrar">Cadastrar herói</string>
+    <string name="botao_ver_lista_herois">Ver lista de herois</string>
 </resources>

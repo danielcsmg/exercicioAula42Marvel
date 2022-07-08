@@ -1,10 +1,9 @@
-package br.com.zup.marvelapp
+package br.com.zup.marvel.ui.home.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.navigation.fragment.NavHostFragment
-import br.com.zup.marvelapp.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity
+import br.com.zup.marvel.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

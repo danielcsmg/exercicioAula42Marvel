@@ -3,24 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/cadastroHeroisFragment">
-
+    app:startDestination="@id/cadastroHeroiFragment">
     <fragment
-        android:id="@+id/cadastroHeroisFragment"
-        android:name="br.com.zup.marvelapp.herois.ListaHeroisFragment"
-        android:label="fragment_cadastro_herois"
-        tools:layout="@layout/fragment_cadastro_herois" >
+        android:id="@+id/cadastroHeroiFragment"
+        android:name="br.com.zup.marvel.ui.cadastroheroi.view.CadastroHeroiFragment"
+        android:label="fragment_cadastro_heroi"
+        tools:layout="@layout/fragment_cadastro_heroi" >
         <action
-            android:id="@+id/action_cadastroHeroisFragment_to_detalheHeroisFragment"
+            android:id="@+id/action_cadastroHeroiFragment_to_listaHeroisFragment"
+            app:destination="@id/listaHeroisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaHeroisFragment"
+        android:name="br.com.zup.marvel.ui.herois.view.ListaHeroisFragment"
+        android:label="fragment_lista_herois"
+        tools:layout="@layout/fragment_lista_herois" >
+        <action
+            android:id="@+id/action_listaHeroisFragment_to_detalheHeroisFragment"
             app:destination="@id/detalheHeroisFragment" />
     </fragment>
     <fragment
         android:id="@+id/detalheHeroisFragment"
-        android:name="br.com.zup.marvelapp.detalhesherois.DetalheHeroisFragment"
-        android:label="fragment_detalhe_herois"
-        tools:layout="@layout/fragment_detalhe_herois" >
-        <argument
-            android:name="heroi"
-            app:argType="br.com.zup.marvelapp.model.Heroi" />
-    </fragment>
+        android:name="br.com.zup.marvel.ui.detalhesherois.DetalheHeroisFragment"
+        android:label="DetalheHeroisFragment" />
 </navigation>

@@ -1,13 +1,15 @@
-package br.com.zup.marvelapp.detalhesherois
+package br.com.zup.marvel.ui.detalhesherois
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import br.com.zup.marvelapp.MainActivity
-import br.com.zup.marvelapp.databinding.FragmentDetalheHeroisBinding
-import br.com.zup.marvelapp.model.Heroi
+import br.com.zup.marvel.constantes.HEROI
+import br.com.zup.marvel.databinding.FragmentDetalheHeroisBinding
+import br.com.zup.marvel.domain.model.Heroi
+import br.com.zup.marvel.ui.home.view.MainActivity
+import com.squareup.picasso.Picasso
 
 class DetalheHeroisFragment : Fragment() {
     private lateinit var binding: FragmentDetalheHeroisBinding
@@ -24,14 +26,25 @@ class DetalheHeroisFragment : Fragment() {
 
         alterarAppBar()
 
-        val args = DetalheHeroisFragmentArgs.fromBundle(requireArguments())
-        mostrarInformacoesHeroi(args.heroi)
     }
 
-    private fun mostrarInformacoesHeroi(heroi: Heroi) {
-        binding.ivHeroi.setImageResource(heroi.getImagem())
-        binding.tvNomeHeroi.text = heroi.getNome()
-        binding.tvDescricaoHeroi.text = heroi.getDescricao()
+    override fun onResume() {
+        super.onResume()
+
+        val heroi = getBundleHeroi()
+        mostrarInformacoesHeroi(heroi)
+    }
+
+    fun getBundleHeroi(): Heroi? {
+        return arguments?.getParcelable<Heroi>(HEROI)
+    }
+
+    private fun mostrarInformacoesHeroi(heroi: Heroi?) {
+        heroi?.let {
+            Picasso.get().load(it.imagem).into(binding.ivHeroi)
+            binding.tvNomeHeroi.text = it.nome
+            binding.tvDescricaoHeroi.text = it.descricao
+        }
     }
 
     private fun alterarAppBar(){

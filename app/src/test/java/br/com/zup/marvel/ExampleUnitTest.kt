@@ -1,4 +1,4 @@
-package br.com.zup.marvelapp
+package br.com.zup.marvel
 
 import org.junit.Test
 
